@@ -5,4 +5,14 @@
 #' @examples
 #' mins_to_hours(60)
 #' mins_to_hours(1:5)
+#' mins_to_hours(0)
 #' @export
+
+mins_to_hours <- function(mins) {
+  if(!is.numeric(mins)) {
+    stop('I am so sorry, but this function only works for numeric input!\n',
+         'You have provided an object of class: ', class(mins)[1])
+  }
+  ((mins) / 60)
+}
+
